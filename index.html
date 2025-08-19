@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World</title>
+    <!-- We're using Tailwind CSS for a clean, modern look. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS can be added here, though we'll primarily use Tailwind. */
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <div class="container p-6">
+        <!-- The main heading element that will be changed by JavaScript -->
+        <h1 id="greeting" class="text-5xl md:text-6xl font-extrabold mb-8 tracking-tight">
+            Hello World!
+        </h1>
+
+        <!-- A simple button to trigger the JavaScript function -->
+        <button id="changeTextBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition-colors duration-300 transform hover:scale-105 shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            Click Me
+        </button>
+    </div>
+
+    <script>
+        // Get a reference to the h1 element by its ID.
+        const greetingElement = document.getElementById('greeting');
+        // Get a reference to the button by its ID.
+        const changeTextBtn = document.getElementById('changeTextBtn');
+
+        // Add a click event listener to the button.
+        changeTextBtn.addEventListener('click', () => {
+            // Change the text content of the greeting element.
+            // A simple if/else statement to toggle the text.
+            if (greetingElement.textContent === 'Hello World!') {
+                greetingElement.textContent = 'Welcome to my first website!';
+            } else {
+                greetingElement.textContent = 'Hello World!';
+            }
+        });
+    </script>
+</body>
+</html>
