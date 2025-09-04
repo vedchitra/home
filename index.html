@@ -4,47 +4,55 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bizC.in - Your Digital Presence, Simplified</title>
+  <!-- Font Awesome CDN -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       line-height: 1.6;
-      background: #f9f9f9;
+      background: #f9fafc;
       color: #333;
     }
     header {
       background: linear-gradient(135deg, #004aad, #2ecc71);
       color: #fff;
-      padding: 20px 0;
+      padding: 30px 20px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
     header img {
-      max-height: 80px;
+      max-height: 90px;
     }
     header h1 {
-      margin: 10px 0 5px;
-      font-size: 2rem;
+      margin: 15px 0 5px;
+      font-size: 2.2rem;
     }
     header p {
       margin: 0;
       font-size: 1.2rem;
+      font-weight: 300;
     }
     .container {
-      width: 90%;
+      width: 92%;
       max-width: 1100px;
       margin: auto;
-      padding: 30px 0;
+      padding: 40px 0;
     }
     section {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       animation: fadeInUp 1s ease-in-out;
     }
     h2 {
       color: #004aad;
-      border-left: 5px solid #2ecc71;
-      padding-left: 10px;
+      font-size: 1.8rem;
       margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 i {
+      color: #2ecc71;
     }
     ul {
       list-style: none;
@@ -54,35 +62,77 @@
       background: #fff;
       margin: 10px 0;
       padding: 12px 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, background 0.2s;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    ul li i {
+      color: #2ecc71;
+      font-size: 1.2rem;
     }
     ul li:hover {
       transform: translateX(5px);
-      background: #f1fdf6;
+      background: #eefef5;
     }
     .contact {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
     .card {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 12px;
       padding: 20px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
+    }
+    .card h3 {
+      margin: 0;
+      color: #004aad;
+      font-size: 1.4rem;
+    }
+    .card p {
+      margin: 8px 0;
+      font-size: 0.95rem;
+    }
+    .card i {
+      color: #2ecc71;
+      margin-right: 8px;
     }
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       background: #004aad;
       color: #fff;
       margin-top: 20px;
+    }
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      width: 55px;
+      height: 55px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: #FFF;
+      border-radius: 50px;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 2px 2px 5px #999;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
     }
     @keyframes fadeInUp {
       from {opacity: 0; transform: translateY(30px);}
@@ -92,6 +142,7 @@
 </head>
 <body>
 
+  <!-- Header -->
   <header>
     <img src="BizC.png" alt="bizC.in Logo">
     <h1>bizC.in</h1>
@@ -100,6 +151,7 @@
 
   <div class="container">
 
+    <!-- About -->
     <section>
       <p>
         bizC.in is your one-stop solution for establishing a powerful online presence. We specialize in creating 
@@ -109,48 +161,56 @@
       </p>
     </section>
 
+    <!-- Features -->
     <section>
-      <h2>📌 फीचर्स आणि मिळणाऱ्या सुविधा</h2>
+      <h2><i class="fa-solid fa-star"></i> फीचर्स आणि मिळणाऱ्या सुविधा</h2>
       <ul>
-        <li>डिजिटल बिझनेस कार्ड</li>
-        <li>फेस्टिवल बॅनर तयार करण्याची सोय</li>
-        <li>व्यवसायाची मिनी वेबसाइट</li>
-        <li>फोन नंबर Save करण्याची सोय</li>
-        <li>PDF Save करण्याची सोय</li>
-        <li>सोशल मीडिया</li>
-        <li>Enquiry फॉर्म</li>
-        <li>5 Business फोटो</li>
-        <li>YouTube embed विडियोची सुविधा</li>
-        <li>कितीही जणांना डिजिटल कार्ड शेयर करू शकता</li>
+        <li><i class="fa-solid fa-id-card"></i> डिजिटल बिझनेस कार्ड</li>
+        <li><i class="fa-solid fa-image"></i> फेस्टिवल बॅनर तयार करण्याची सोय</li>
+        <li><i class="fa-solid fa-globe"></i> व्यवसायाची मिनी वेबसाइट</li>
+        <li><i class="fa-solid fa-phone"></i> फोन नंबर Save करण्याची सोय</li>
+        <li><i class="fa-solid fa-file-pdf"></i> PDF Save करण्याची सोय</li>
+        <li><i class="fa-brands fa-facebook"></i> सोशल मीडिया</li>
+        <li><i class="fa-solid fa-envelope"></i> Enquiry फॉर्म</li>
+        <li><i class="fa-solid fa-camera"></i> 5 Business फोटो</li>
+        <li><i class="fa-brands fa-youtube"></i> YouTube embed विडियोची सुविधा</li>
+        <li><i class="fa-solid fa-share-nodes"></i> कितीही जणांना डिजिटल कार्ड शेयर करू शकता</li>
       </ul>
     </section>
 
+    <!-- Contact -->
     <section>
-      <h2>📞 Contact Details</h2>
+      <h2><i class="fa-solid fa-phone-volume"></i> Contact Details</h2>
       <div class="contact">
         <div class="card">
-          <h3>DnyanGroup</h3>
+          <h3><i class="fa-solid fa-building"></i> DnyanGroup</h3>
           <p><em>(bizC.in Project Business Partner)</em></p>
-          <p><strong>Address:</strong> Flat 2, Metharam Apt, Tarabai Park, Kolhapur, Maharashtra 416003</p>
-          <p><strong>Phone:</strong> 9552912142, 9923779911</p>
-          <p><strong>Email:</strong> dnyangroup@gmail.com</p>
-          <p><strong>Web:</strong> <a href="https://dnyangroup.com" target="_blank">dnyangroup.com</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> Flat 2, Metharam Apt, Tarabai Park, Kolhapur, Maharashtra 416003</p>
+          <p><i class="fa-solid fa-phone"></i> 9552912142, 9923779911</p>
+          <p><i class="fa-solid fa-envelope"></i> dnyangroup@gmail.com</p>
+          <p><i class="fa-solid fa-globe"></i> <a href="https://dnyangroup.com" target="_blank">dnyangroup.com</a></p>
         </div>
         <div class="card">
-          <h3>VedChitra Groups</h3>
+          <h3><i class="fa-solid fa-building"></i> VedChitra Groups</h3>
           <p><em>(bizC.in Project Powered by)</em></p>
-          <p><strong>Address:</strong> 907, Ravalnath colony, Ajara, Kolhapur, Maharashtra 416505</p>
-          <p><strong>Email:</strong> vedchitragroups@gmail.com</p>
-          <p><strong>Web:</strong> <a href="https://vedchitra.com" target="_blank">vedchitra.com</a></p>
+          <p><i class="fa-solid fa-location-dot"></i> 907, Ravalnath colony, Ajara, Kolhapur, Maharashtra 416505</p>
+          <p><i class="fa-solid fa-envelope"></i> vedchitragroups@gmail.com</p>
+          <p><i class="fa-solid fa-globe"></i> <a href="https://vedchitra.com" target="_blank">vedchitra.com</a></p>
         </div>
       </div>
     </section>
 
   </div>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 bizC.in | Designed with ❤️</p>
   </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/919552912142" class="whatsapp-float" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+  </a>
 
 </body>
 </html>
